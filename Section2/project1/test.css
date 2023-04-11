@@ -1,0 +1,66 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+#wrapper{
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+#container{
+    height: 100%;
+   
+}
+
+#sidebar{
+    width: 250px;
+    height: 100%;
+    background-color: aqua;
+    position: fixed;
+    left: -250px;
+    border: 1px solid black;
+}
+.header{
+    margin: 15%;
+    font-size: 1.5rem;
+    border-bottom: 1px solid black;
+} 
+.link{
+    padding-left: 2rem;
+    font-size: 1.5rem;
+    margin: 2rem 0;
+}
+label .open, label .close{
+    position: absolute;
+}
+label .close{
+    padding-left: 190px;
+    font-size: 1.5rem;
+    left: -250px;
+    z-index: -7;
+    transition: all .5s ease;
+}
+
+label .open{
+    font-size: 1.5rem;
+}
+#btn{
+    display: none;
+}
+
+#btn:checked ~ #sidebar{
+    left: 0px;
+}
+
+#btn:checked ~ label .open{
+    left: 250px;
+    opacity: 0;
+    transition: all .5s ease;
+}
+
+#btn:checked ~ label .close{
+    left: 0px;
+    z-index: 999;
+}
